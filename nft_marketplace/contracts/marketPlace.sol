@@ -45,4 +45,28 @@ contract marketPlace is ReentrancyGuard{
 
 
 
+function getListingPrice() public view returns(uint256){        //returns the price of listing on NFT
+    return listingFee;
+}
+
+function createMarketSale( address nftContract, uint itemId) public payable nonReentrant{       // tranfers the NFT to the buyer and the price to seller
+                                                                                                // also updates the records and transfer the listing fee to the owner
+    uint price= tokenIdToToken[itemId].price;
+    uint tokenId= tokenIdToToken[itemId].token_Id;
+    require(msg.value == price, 'Please submit the asking price in order to continue');
+
+    tokenIdToToken[itemId].seller.transfer(msg.value);
+    IERC721(nftContract).transferFrom(address(this), msg.sender, tokenId);
+    tokenIdToToken[itemId].owner = payable(msg.sender);
+    tokenIdToToken[itemId].sold = true;
+    tokens_Sold.increment();
+
+    payable(owner).transfer(listingFee);
+}
+
+
+
+
+
+
 }
