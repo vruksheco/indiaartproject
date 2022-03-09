@@ -69,7 +69,7 @@ function createMarketSale( address nftContract, uint itemId) public payable nonR
 
 function fetchMarketTokens() public view returns(MarketToken[] memory) {
     uint itemCount = _tokenIds.current();
-    uint unsoldItemCount = _tokenIds.current() - _tokensSold.conduct();
+    uint unsoldItemCount = _tokenIds.current() - _tokensSold.current();
     uint currentIndex = 0;
 
     //looping over the number of items created(if number has not been sold populated the array)
@@ -94,8 +94,8 @@ function mintMarketItem(
 )
 public payable nonReentrant {
 
-require(Price > 0, 'Price must be atleast one wei');
-require(msg.value == lisitngPrice, 'Price must be equal to lisiting price');
+require(price > 0, 'Price must be atleast one wei');
+require(msg.value == listingPrice, 'Price must be equal to lisiting price');
 
 _tokenIds.increment();
 uint itemId = _tokenIds.current();
@@ -151,7 +151,7 @@ for(uint i=0;i< totalItemCount;i++)
 {
     if(idToMarketToken[i+1].owner==msg.sender)
     {
-        uint currentId= idTomarketToken[i+1].itemId;
+        uint currentId= idToMarketToken[i+1].itemId;
         //current array
         MarketToken storage currentItem= idToMarketToken[currentId];
         items[currentIndex]=currentItem;
