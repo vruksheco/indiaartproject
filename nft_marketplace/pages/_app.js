@@ -6,11 +6,11 @@ import Link from 'next/link'
 function NFTmarketplace({Component, pageProps}) {
   return (
     <div>
-      {/* <nav className='border-b p-6' style={{backgroundColor:'white'}}>
-        <div className='border-b' style={{backgroundColor: 'purple'}}>
-        <p className='text-4x1 font-bold test-white'>NFT-Marketplace </p>
+       <nav className='border-b p-6' style={{backgroundColor:'white'}}>
+        <div className='border-b' style={{backgroundColor: '#33B5FF'}}>
+        <p className='heading text-black'>NFT-Marketplace </p>
         </div>
-        <div className='flex mt-4 justify-center'>
+        <div className='sample'>
           <Link href='/'>
             <a className='mr-4'>
               Main Marketplace 
@@ -32,7 +32,7 @@ function NFTmarketplace({Component, pageProps}) {
             </a>
           </Link>
         </div>
-      </nav> */}
+      </nav> 
 
       <head>  
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
