@@ -3,14 +3,12 @@
 }
 
 a {
-    color: black;
+    color: rgb(238, 107, 0);
     transition: all 0.2s;
-
-    text-decoration: none !important;
 }
 
 a:hover{
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 .carousel-item {
@@ -29,27 +27,8 @@ a:hover{
     padding-bottom: 50px;
 }
 
-.sample{
+.toppper {
     display: flex;
     justify-content: center;
     gap: 10px;
-    
-    margin-right: 4rem;
-}
-
-.heading{
-    /* font: italic; */
-    text-align: center;
-    
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    /* text: text-4x1;
-    
-    text-4x1 font-bold test-white text-center */
-}
-
-.linkpage{
-    margin-right: 4rem;
-    
 }

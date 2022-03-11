@@ -6,32 +6,32 @@ import Link from 'next/link'
 function NFTmarketplace({Component, pageProps}) {
   return (
     <div>
-       <nav className='border-b p-6' style={{backgroundColor:'white'}}>
-        <div className='border-b' style={{backgroundColor: '#33B5FF'}}>
-        <p className='heading text-black'>NFT-Marketplace </p>
-        </div>
-        <div className='sample'>
+      <nav className='border-b p-6' style={{backgroundColor:'#00539CFF'}}>
+        <p className='text-4x1 font-bold text-orange-300 text-center pt-3'>NFT-Marketplace </p>
+        
+        <div className='flex mt-4 justify-center'>
           <Link href='/'>
-            <a className='mr-4'>
+            <a className='mr-4 text-orange-200 no-underline font-semibold'>
               Main Marketplace 
             </a>
           </Link>
           <Link href='/mint-item'>
-            <a className='mr-6'>
+            <a className='mr-6 text-orange-200 no-underline font-semibold '>
               Mint tokens
             </a>
           </Link>
           <Link href='/my-nfts'>
-            <a className='mr-6'>
+            <a className='mr-6 text-orange-200 no-underline font-semibold '>
               My NFTs
             </a>
           </Link>
           <Link href='/account-dashboard'>
-            <a className='mr-6'>
+            <a className='mr-6 text-orange-200 no-underline font-semibold'>
               Account Dashboard
             </a>
           </Link>
         </div>
+        
       </nav> 
 
       <head>  
