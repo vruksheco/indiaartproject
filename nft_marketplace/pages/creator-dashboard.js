@@ -60,6 +60,8 @@ export default function CreatorDashBoard() {
     className='px-20 py-7 text-4x1'>You have not minted any NFTs!</h1>)
 
     return (
+
+        
         <div className='p-4'>
             <h1 style={{fontSize:'20px', color:'purple'}}>Tokens Minted</h1>
               <div className='px-4' style={{maxWidth: '1600px'}}>
