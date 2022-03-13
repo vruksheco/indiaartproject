@@ -12,12 +12,12 @@ function NFTmarketplace({Component, pageProps}) {
         <div className='flex mt-4 justify-center'>
           <Link href='/'>
             <a className='mr-4 text-orange-200 no-underline font-semibold'>
-              Main Marketplace 
+              Home 
             </a>
           </Link>
-          <Link href='/mint-item'>
+          <Link href='/Marketplace'>
             <a className='mr-6 text-orange-200 no-underline font-semibold '>
-              Mint tokens
+              Marketplace
             </a>
           </Link>
           <Link href='/my-nfts'>
@@ -27,7 +27,7 @@ function NFTmarketplace({Component, pageProps}) {
           </Link>
           <Link href='/account-dashboard'>
             <a className='mr-6 text-orange-200 no-underline font-semibold'>
-              Account Dashboard
+              Creator Dashboard
             </a>
           </Link>
         </div>
