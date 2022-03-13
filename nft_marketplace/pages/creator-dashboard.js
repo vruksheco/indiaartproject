@@ -6,8 +6,8 @@ import Web3Modal from 'web3modal'
 
 // import { nftaddress, nftmarketaddress } from '../config'
 
-import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
-import KBMarket from '../artifacts/contracts/KBMarket.sol/KBMarket.json'
+import NFT from '../artifacts/contracts/mintNFT.sol/mintNFT.json'
+import KBMarket from '../artifacts/contracts/marketPlace.sol/marketPlace.json'
 
 export default function CreatorDashBoard() {
     // array of nfts
