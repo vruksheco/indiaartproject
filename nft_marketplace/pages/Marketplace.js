@@ -3,10 +3,10 @@ import {useEffect, useState} from 'react'
 import axios from 'axios'
 import Web3Modal from 'web3modal'
 
-// import { nftaddress, nftmarketaddress } from '../config'
+import { nftaddress, nftmarketaddress } from '../config'
 
-import NFT from '../artifacts/contracts/mintNFT.sol/mintNFT.json'
-import KBMarket from '../artifacts/contracts/marketPlace.sol/marketPlace.json'
+import mintNFT from '../artifacts/contracts/mintNFT.sol/mintNFT.json'
+import marketPlace from '../artifacts/contracts/marketPlace.sol/marketPlace.json'
 
 
 
@@ -23,8 +23,8 @@ export default function Marketplace() {
     // ***provider, tokenContract, marketContract, data for our marketItems***
 
     const provider = new ethers.providers.JsonRpcProvider()
-    const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider)
-    const marketContract = new ethers.Contract(nftmarketaddress, KBMarket.abi, provider)
+    const tokenContract = new ethers.Contract(nftaddress, mintNFT.abi, provider)
+    const marketContract = new ethers.Contract(nftmarketaddress, marketPlace.abi, provider)
     const data = await marketContract.fetchMarketTokens()
 
     const items = await Promise.all(data.map(async i => {
