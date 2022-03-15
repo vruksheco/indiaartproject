@@ -1,7 +1,7 @@
 import { ethers } from 'ethers'
 import { useState } from 'react'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
-import web3Modal from 'web3modal'
+import Web3Modal from 'web3modal'
 
 import { nftaddress, nftmarketaddress } from '../config'
 
@@ -39,14 +39,16 @@ export default function MintItem(){
             name, description, image: fileUrl
         })
         try {
-            
+            const added =  await client.add(data)
+            const url = `https://ipfs.infura.io:5001/api/v0/${added.path}`
+            createSale(url)
         } catch (error) {
             console.log('Error uploading file:',error)
         }
     }
     
     async function createSale(url){
-        const web3Modal = new web3Modal()
+        const web3Modal = new Web3Modal()
         const connection = await web3Modal.connect()
         const provider = new ethers.providers.Web3Provider(connection)
         const signer = provider.getSigner()
