@@ -1,4 +1,15 @@
+* {
+    box-sizing: border-box;
+}
 
+a {
+    color: rgb(238, 107, 0);
+    transition: all 0.2s;
+}
+
+a:hover{
+    opacity: 0.9;
+}
 
 .carousel-item {
     height: 32rem;
