@@ -52,7 +52,7 @@ export default function Marketplace() {
       const connection = await web3Modal.connect()
       const provider = new ethers.providers.Web3Provider(connection)
       const signer = provider.getSigner()
-      const contract = new ethers.Contract(nftmarketaddress, KBMarket.abi, signer)
+      const contract = new ethers.Contract(nftmarketaddress, marketPlace.abi, signer)
   
       const price = ethers.utils.parseUnits(nft.price.toString(), 'ether')
       const transaction = await contract.createMarketSale(nftaddress, nft.tokenId, {

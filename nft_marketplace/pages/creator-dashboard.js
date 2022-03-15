@@ -3,7 +3,7 @@ import {ethers} from 'ethers'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 import Web3Modal from 'web3modal'
-
+import Link from 'next/link'
 import { nftaddress, nftmarketaddress } from '../config'
 
 import mintNFT from '../artifacts/contracts/mintNFT.sol/mintNFT.json'
