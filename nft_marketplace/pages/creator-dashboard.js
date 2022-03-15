@@ -8,6 +8,7 @@ import Web3Modal from 'web3modal'
 
 import NFT from '../artifacts/contracts/mintNFT.sol/mintNFT.json'
 import KBMarket from '../artifacts/contracts/marketPlace.sol/marketPlace.json'
+import Link from 'next/link'
 
 export default function CreatorDashBoard() {
     // array of nfts
@@ -61,8 +62,13 @@ export default function CreatorDashBoard() {
 
     return (
 
-        
+
         <div className='p-4'>
+            <Link href='/mint-Items'>
+                <a>
+                    Create
+                </a>
+            </Link>
             <h1 style={{fontSize:'20px', color:'purple'}}>Tokens Minted</h1>
               <div className='px-4' style={{maxWidth: '1600px'}}>
               <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4'>

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import web3Modal from 'web3modal'
 
-import { nftaddress, nftmarketaddress } from '../config'
+// import { nftaddress, nftmarketaddress } from '../config'
 
 import mintNFT from '../artifacts/contracts/mintNFT.sol/mintNFT.json'
 import marketPlace from '../artifacts/contracts/marketPlace.sol/marketPlace.json'

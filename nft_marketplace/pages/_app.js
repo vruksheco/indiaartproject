@@ -25,7 +25,7 @@ function NFTmarketplace({Component, pageProps}) {
               My NFTs
             </a>
           </Link>
-          <Link href='/account-dashboard'>
+          <Link href='/creator-dashboard'>
             <a className='mr-6 text-orange-200 no-underline font-semibold'>
               Creator Dashboard
             </a>
