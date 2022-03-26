@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import Web3Modal from 'web3modal'
 
-// import { nftaddress, nftmarketaddress } from '../config'
+import { nftaddress, nftmarketaddress } from '../config'
 
 import mintNFT from '../artifacts/contracts/mintNFT.sol/mintNFT.json'
 import marketPlace from '../artifacts/contracts/marketPlace.sol/marketPlace.json'
@@ -24,7 +24,7 @@ export default function MintItem(){
                 progress: (prog) => console.log(`received: ${prog}`)
             }
         )
-        const url = `https://ipfs.infura.io:5001/api/v0/${added.path}`
+        const url = `https://ipfs.infura.io/ipfs/${added.path}`
         setFileUrl(url)
         }catch(error){
             console.log('Error uploading file:',error)
@@ -40,7 +40,7 @@ export default function MintItem(){
         })
         try {
             const added =  await client.add(data)
-            const url = `https://ipfs.infura.io:5001/api/v0/${added.path}`
+            const url = `https://ipfs.infura.io/ipfs/${added.path}`
             createSale(url)
         } catch (error) {
             console.log('Error uploading file:',error)
@@ -101,6 +101,7 @@ export default function MintItem(){
                 }
                 <button onClick={createMarket}
                 className='font-bold mt-4 bg-purple-500 text-white rounded p-4 shadow-lg'>
+                    Mint NFT
                 </button>
             </div>    
         </div>

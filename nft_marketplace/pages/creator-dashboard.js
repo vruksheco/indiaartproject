@@ -34,6 +34,7 @@ export default function CreatorDashBoard() {
 
     const items = await Promise.all(data.map(async i => {
         const tokenUri = await tokenContract.tokenURI(i.tokenId)
+        console.log(tokenUri)
         // we want get the token metadata - json 
         const meta = await axios.get(tokenUri)
         let price = ethers.utils.formatUnits(i.price.toString(), 'ether')
@@ -54,10 +55,21 @@ export default function CreatorDashBoard() {
     setSold(soldItems)
     setNFts(items)
     setLoadingState('loaded')
+    console.log(nfts.length)
   }
 
-  if(loadingState === 'loaded' && !nfts.length) return (<h1
-    className='px-20 py-7 text-4x1'>You have not minted any NFTs!</h1>)
+  if(loadingState === 'loaded' && !nfts.length) return (
+    <div>
+      <div>
+      <Link href='/mint-Items'>
+                <a>
+                    Create
+                </a>
+            </Link>
+      </div>
+    <h1 className='px-20 py-7 text-4x1'>You have not minted any NFTs!</h1>
+    </div>
+    )
 
     return (
 
