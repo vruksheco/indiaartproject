@@ -58,7 +58,7 @@ export default function MyAssests() {
 
     
   if(loadingState === 'loaded' && !nfts.length) return (<h1
-    className='px-20 py-7 text-4x1'>You do not own any NFts currently :( </h1>)
+    className='px-20 py-7 text-4x1 text-center'>You do not own any NFts currently :( </h1>)
 
     return (
       <div className='flex justify-center'>

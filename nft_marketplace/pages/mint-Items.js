@@ -67,7 +67,7 @@ export default function MintItem(){
 
         transaction = await contract.mintMarketItem(nftaddress, tokenId, price, {value: listingPrice})
         await transaction.wait()
-        router.push('./')
+        router.push('./Marketplace')
     }
 
     return(
@@ -100,7 +100,7 @@ export default function MintItem(){
                 )
                 }
                 <button onClick={createMarket}
-                className='font-bold mt-4 bg-purple-500 text-white rounded p-4 shadow-lg'>
+                className='font-bold mt-4 bg-sky-700 text-orange-200 rounded p-4 shadow-lg'>
                     Mint NFT
                 </button>
             </div>    

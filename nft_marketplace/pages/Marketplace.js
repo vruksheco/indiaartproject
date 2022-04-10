@@ -63,7 +63,7 @@ export default function Marketplace() {
       loadNFTs()
   }
   if(loadingState === 'loaded' && !nfts.length) return (<h1
-    className='px-20 py-7 text-4x1'>No NFts in marketplace</h1>)
+    className='px-20 py-7 text-4x1 text-center'>No NFts in marketplace</h1>)
 
     return (
       <div className='flex justify-center'>
@@ -82,7 +82,7 @@ export default function Marketplace() {
                       </div>
                       <div className='p-4 bg-black'>
                           <p className='text-3x-1 mb-4 font-bold text-white'>{nft.price} ETH</p>
-                          <button className='w-full bg-purple-500 text-white font-bold py-3 px-12 rounded'
+                          <button className='w-full bg-sky-700 text-white font-bold py-3 px-12 rounded'
                           onClick={()=> buyNFT(nft)} >Buy
                           </button>
                         </div>

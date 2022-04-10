@@ -5,7 +5,7 @@ import axios from 'axios'
 import Web3Modal from 'web3modal'
 import Link from 'next/link'
 import { nftaddress, nftmarketaddress } from '../config'
-
+import { useRouter } from 'next/router'
 import mintNFT from '../artifacts/contracts/mintNFT.sol/mintNFT.json'
 import marketPlace from '../artifacts/contracts/marketPlace.sol/marketPlace.json'
 
@@ -14,10 +14,15 @@ export default function CreatorDashBoard() {
   const [nfts, setNFts] = useState([])
   const [sold, setSold] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
+  const router = useRouter()
 
   useEffect(()=> {
     loadNFTs()
   }, [])
+
+  async function changePage(){
+    router.push('./mint-Items')
+  }
 
   async function loadNFTs() {
       // what we want to load:
@@ -60,14 +65,12 @@ export default function CreatorDashBoard() {
 
   if(loadingState === 'loaded' && !nfts.length) return (
     <div>
-      <div>
-      <Link href='/mint-Items'>
-                <a>
-                    Create
-                </a>
-            </Link>
+      <div className='px-6 py-4'>
+        <button className='bg-sky-700 text-orange-200 py-1 px-12 rounded font-semibold' onClick={changePage}>
+        Create
+        </button>
       </div>
-    <h1 className='px-20 py-7 text-4x1'>You have not minted any NFTs!</h1>
+      <h1 className='px-20 py-7 text-4x1 text-center'>You have not minted any NFTs!</h1>
     </div>
     )
 
@@ -75,12 +78,12 @@ export default function CreatorDashBoard() {
 
 
         <div className='p-4'>
-            <Link href='/mint-Items'>
-                <a>
-                    Create
-                </a>
-            </Link>
-            <h1 style={{fontSize:'20px', color:'purple'}}>Tokens Minted</h1>
+          <div className='px-6 py-4'>
+            <button className='bg-sky-700 text-orange-200 py-1 px-12 rounded font-semibold' onClick={changePage}>
+            Create
+            </button>
+          </div>
+            <h1 style={{fontSize:'20px', color:'rgb(30 64 175)'}}>Tokens Minted</h1>
               <div className='px-4' style={{maxWidth: '1600px'}}>
               <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4'>
                 {
