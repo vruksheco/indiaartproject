@@ -12,7 +12,7 @@ contract mintNFT is ERC721URIStorage{
 
     address marketAddress;          //address of NFT marketPlace contract
 
-    constructor(address _marketAddress) ERC721('KryptoBirdz','KBIRDZ'){      // to set marketplace address
+    constructor(address _marketAddress) ERC721('ManiacNFT','MNFT'){      // to set marketplace address
         marketAddress=_marketAddress;
     }
 

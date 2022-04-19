@@ -7,7 +7,7 @@ function NFTmarketplace({Component, pageProps}) {
   return (
     <div>
       <nav className='border-b p-6' style={{backgroundColor:'#00539CFF'}}>
-        <p className='text-4x1 font-bold text-orange-300 text-center pt-3'>NFT-Marketplace </p>
+        <p className='text-4x1 font-bold text-orange-300 text-center pt-3'>ManiacNFT </p>
         
         <div className='flex mt-4 justify-center'>
           <Link href='/'>
@@ -33,10 +33,6 @@ function NFTmarketplace({Component, pageProps}) {
         </div>
       </nav> 
 
-      <head>  
-      <title>Project-17</title>
-      </head>
-      
       <Component {...pageProps} />
     </div>
 
