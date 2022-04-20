@@ -2,13 +2,19 @@
     box-sizing: border-box;
 }
 
-a {
-    color: rgb(238, 107, 0);
+/* a {
+    color: rgb(40, 201, 40);
     transition: all 0.2s;
-}
+} */
+ 
+
 
 a:hover{
     opacity: 0.9;
+}
+
+.asdf:hover{
+    background-color: aqua;
 }
 
 .carousel-item {
