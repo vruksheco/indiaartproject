@@ -1,8 +1,7 @@
 import React from "react";
 export default function Home() {
   const images = [
-    "https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80",
-    "https://images.unsplash.com/photo-1523438097201-512ae7d59c44?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+    "https://i.cdn.newsbytesapp.com/images/l72420220107103458.jpeg",
     "https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
   ];
 
@@ -76,7 +75,7 @@ export default function Home() {
   );
 
   return (
-    <div className="py-5 ">
+    <div className="py-5 bg-slate-200">
       <div className="flex items-center justify-center w-full p-12 max-h-1/4">
         <div className="relative w-full">
           <div
@@ -87,7 +86,7 @@ export default function Home() {
           >
             {sliderControl(true)}
             {images.map((img, i) => (
-              <div className="flex-shrink-0 w-full" key={img} ref={refs[i]}>
+              <div className="flex-shrink-0 w-auto" key={img} ref={refs[i]}>
                 <img src={img} className="object-contain w-full" />
               </div>
             ))}
@@ -96,9 +95,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-5 px-7 ">
-        <p className="text-4xl">What are NFTs</p>
-        <p className="py-4 text-xl">
+      <div className="py-5 px-7">
+        <p className="text-4xl">About NFTs...</p>
+        <p className="py-4 text-xl text-justify">
           NFTs or Non-Fungible Tokens are digital tokens that represent
           ownership of any unique asset like art, collectibles, music, popular
           moments of history, even real estate. At a time, an NFT can have only
@@ -113,7 +112,9 @@ export default function Home() {
           Whereas, "Fungible" means something which can be exchanged for another
           similar entity, something which isn’t unique. Like a 10 rupees note
           can be exchanged for another 10 rupees note or a bitcoin which can be
-          traded for another bitcoin. One can buy, sell, trade, or give NFTs to
+          traded for another bitcoin. 
+          <br/><br/>
+          One can buy, sell, trade, or give NFTs to
           anyone online, but a network of computers must verify the trade and
           the unique data. NFTs are secured with a unique code assigned with it
           for authenticity purposes. Customers or fans especially the die-hard
@@ -131,95 +132,74 @@ export default function Home() {
         Resources For Getting Started
       </div>
       <div className="flex flex-wrap justify-around">
-        <div class="flex justify-center">
-          <div class="rounded-lg shadow-lg bg-white max-w-sm  hover:shadow-2xl">
+        <div className="flex justify-center">
+          <div className="rounded-lg shadow-lg bg-white max-w-sm  hover:shadow-2xl">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
               <img
-                class="rounded-t-lg"
-                src="https://opensea.io/blog/wp-content/uploads/2022/02/image-13.png"
-                alt=""
-              />
-            </a>
-            <div class="p-6">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">
-                Setting Up Metamask Wallet
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-center">
-          <div class="rounded-lg shadow-lg bg-white max-w-sm  hover:shadow-2xl">
-            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-              <img
-                class="rounded-t-lg"
+                className="rounded-t-lg"
                 src="https://opensea.io/blog/wp-content/uploads/2021/02/creating-selling-nfts.png"
                 alt=""
               />
             </a>
-            <div class="p-6">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">
-                Funding Your Metamask Wallet
+            <div className="p-6">
+              <h5 className="text-gray-900 text-xl font-medium mb-2">
+               <a href="https://youtu.be/Af_lQ1zUnoM" target={"_blank"}>
+                Setting Up Metamask Wallet
+                </a>
               </h5>
             </div>
           </div>
         </div>
-        <div class="  flex justify-center hover:shadow-2xl">
-          <div class="rounded-lg shadow-xl bg-white max-w-sm">
+        <div className="flex justify-center">
+          <div className="rounded-lg shadow-lg bg-white max-w-sm  hover:shadow-2xl">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
               <img
-                class="rounded-t-lg"
+                className="rounded-t-lg"
                 src="https://opensea.io/blog/wp-content/uploads/2022/02/image-13.png"
                 alt=""
               />
             </a>
-            <div class="p-6">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">Card title</h5>
+            <div className="p-6">
+              <h5 className="text-gray-900 text-xl font-medium mb-2">
+               <a href="https://youtu.be/c_MW2GuJYRo" target={"_blank"}>
+                NFT Security and Privacy
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div className="  flex justify-center hover:shadow-2xl">
+          <div className="rounded-lg shadow-xl bg-white max-w-sm">
+            <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+              <img
+                className="rounded-t-lg"
+                src="https://www.goodreturns.in/img/2021/06/polygon-network-logo-1622690786.jpg"
+                alt=""
+              />
+            </a>
+            <div className="p-6">
+              <a href="https://youtu.be/GWUwFDFOipo" target={"_blank"}>
+              <h5 className="py-8 text-gray-900 text-xl font-medium mb-2">Polygon Blockchain Explained</h5>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* <div className="flex justify-center py-10 text-orange-200 ">
-        <div className="w-1/4 px-3 py-3 bg-red-500">
-          <p className="text-2xl">Connect your Wallet</p>
-          <p className="py-3 text-lg">
-            Download the Metamask Extension for chrome and login for
-            facilitating transactions on our NFT MarketPlace
-          </p>
-        </div>
-
-        <div>
-          <div className="px-3 py-3 my-4 bg-green-500 ">
-            <p className="text-2xl">create NFT</p>
-            <p className="py-3 text-lg">
-              Easily create NFTs,add description and set price for you artwork
-              through "Mint NFTs" Tab{" "}
-            </p>
-          </div>
-          <div className="px-3 py-3 bg-orange-500 ">
-            <p className="text-2xl">easily sell NFT</p>
-            <p className="py-3 text-lg">
-              Easy,safe and secure transactions and the amount gets directly
-              deposited in your Metamask wallet .
-            </p>
-          </div>
-        </div>
-      </div> */}
-
       <div className="flex px-10 py-10 my-10 bg-blue-50 justify-evenly">
-        <div class="flex justify-center ">
-          <div class=" rounded-lg   max-w-sm ">
+        <div className="flex justify-center ">
+          <div className=" rounded-lg   max-w-sm ">
             <img
-              class="rounded-t-lg px-20"
+              className="rounded-t-lg px-20"
               src="https://opensea.io/static/images/icons/wallet.svg"
               alt=""
             />
 
-            <div class="p-6 ">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">
+            <div className="p-6 ">
+              <h5 className="text-gray-900 text-xl font-medium mb-2">
                 Connect Your Wallet
               </h5>
-              <p class="text-gray-700 text-base mb-4">
+              <p className="text-gray-700 text-base mb-4">
                 Download the Metamask Extension for chrome and login for
                 facilitating transactions on our NFT MarketPlace
               </p>
@@ -227,16 +207,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="flex justify-center ">
-          <div class="rounded-lg  max-w-sm">
+        <div className="flex justify-center ">
+          <div className="rounded-lg  max-w-sm">
             <img
-              class="rounded-t-lg px-20"
+              className="rounded-t-lg px-20"
               src="https://opensea.io/static/images/icons/nft.svg"
               alt=""
             />
-            <div class="p-6">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">Create NFT</h5>
-              <p class="text-gray-700 text-base mb-4">
+            <div className="p-6">
+              <h5 className="text-gray-900 text-xl font-medium mb-2">Create NFT</h5>
+              <p className="text-gray-700 text-base mb-4">
                 Upload your work, add a title and description, and customize
                 your NFTs.
               </p>
@@ -244,18 +224,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="flex justify-center">
-          <div class="rounded-lg  max-w-sm">
+        <div className="flex justify-center">
+          <div className="rounded-lg  max-w-sm">
             <img
-              class="rounded-t-lg px-20"
+              className="rounded-t-lg px-20"
               src="https://opensea.io/static/images/icons/collection.svg"
               alt=""
             />
-            <div class="p-6">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">
+            <div className="p-6">
+              <h5 className="text-gray-900 text-xl font-medium mb-2">
                 Create your collection
               </h5>
-              <p class="text-gray-700 text-base mb-4">
+              <p className="text-gray-700 text-base mb-4">
                 Click{" "}
                 <a href="/marketplace" className="text-blue-800 ">
                   <span className="font-bold">My Collections</span>
@@ -267,16 +247,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="flex justify-center">
-          <div class="rounded-lg  max-w-sm">
+        <div className="flex justify-center">
+          <div className="rounded-lg  max-w-sm">
             <img
-              class="rounded-t-lg px-20"
+              className="rounded-t-lg px-20"
               src="https://opensea.io/static/images/icons/sale.svg"
               alt=""
             />
-            <div class="p-6">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">Trade NFTs</h5>
-              <p class="text-gray-700 text-base mb-4 styles.centerAlign">
+            <div className="p-6">
+              <h5 className="text-gray-900 text-xl font-medium mb-2">Trade NFTs</h5>
+              <p className="text-gray-700 text-base mb-4 styles.centerAlign">
                 Easy,safe and secure transactions and the amount gets directly
                 deposited in your Metamask wallet .
               </p>
@@ -284,6 +264,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* <div className="bg-blue-100">
+              <p className="px-20 py-20    ">
+                Created By:
+                <br/>
+                Aishwarya Pardhi | Ajinkya Wadekar | Gaurav Laud | Shounik Shukla | Varad Loya 
+              </p>
+      </div> */}
     </div>
   );
 }

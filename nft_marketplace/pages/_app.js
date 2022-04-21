@@ -7,8 +7,8 @@ function NFTmarketplace({ Component, pageProps }) {
   return (
     <div>
       <div>
-        <nav className="z-10 w-full shadow-sm ">
-          <div className="flex items-center w-full h-20">
+        <nav className="z-10 w-full shadow-sm bg-blue-200   ">
+          <div className="flex items-center w-full h-20 ">
             <div className="flex items-center justify-between w-full mx-20">
               <div className="flex items-center justify-center flex-shrink-0 ">
                 <h1 className="text-xl font-bold ">
@@ -18,31 +18,35 @@ function NFTmarketplace({ Component, pageProps }) {
               <div className="hidden md:block">
                 <div className="flex items-baseline ml-10 space-x-4">
                   <Link href="/">
-                    <a className={router.pathname == "/" ? "active" : ""}>
-                      Home
-                    </a>
+                  <p className="px-3 py-2 text-sm font-bold cursor-pointer text-black rounded-md hover:bg-blue-600 hover:text-white">
+                    Home
+                    </p>
                   </Link>
                   <Link
                     href="/Marketplace"
                     activeClass="about"
-                    className="px-3 py-2 text-sm font-medium text-black rounded-md hover:bg-blue-600 hover:text-white"
                   >
+                    <p className="px-3 py-2 text-sm font-bold text-black  cursor-pointer rounded-md hover:bg-blue-600 hover:text-white">
                     MarketPlace
+                    </p>
                   </Link>
                   <Link
                     href="/my-nfts"
                     activeClass="Services"
-                    className="px-3 py-2 text-sm font-medium text-black rounded-md hover:bg-blue-600 hover:text-white"
                   >
+                    <p className="px-3 py-2 text-sm font-bold cursor-pointer text-black rounded-md hover:bg-blue-600 hover:text-white">
                     My NFts
+                    </p>
                   </Link>
 
                   <Link
                     activeClass="contact"
                     href="/creator-dashboard"
-                    className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-black"
+                    className="px-3 py-2  text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-black"
                   >
-                    Creator Dashboard
+                    <p className="px-3 py-2 text-sm font-bold cursor-pointer text-black rounded-md hover:bg-blue-600 hover:text-white">
+                    CreatorBoard
+                    </p>
                   </Link>
                 </div>
               </div>

@@ -79,7 +79,7 @@ export default function CreatorDashBoard() {
 
         <div className='p-4'>
           <div className='px-6 py-4'>
-            <button className='bg-sky-700 text-orange-200 py-1 px-12 rounded font-semibold' onClick={changePage}>
+            <button className='bg-orange-500 text-white py-1 px-12 rounded font-semibold' onClick={changePage}>
             Create
             </button>
           </div>
@@ -88,8 +88,10 @@ export default function CreatorDashBoard() {
               <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4'>
                 {
                   nfts.map((nft, i)=>(
-                    <div key={i} className='border shadow rounded-x1 overflow-hidden'>
-                      <img src={nft.image} />
+                    <div key={i} className='border shadow rounded-lg overflow-hidden'>
+                      <div className='flex justify-center'>
+                      <img src={nft.image} className='max-h-48'/>
+                      </div>
                       <div className='p-4'>
                         <p style={{height:'64px'}} className='text-3x1 font-semibold'>{
                           nft.name}</p>

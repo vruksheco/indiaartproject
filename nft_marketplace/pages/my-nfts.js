@@ -58,7 +58,7 @@ export default function MyAssests() {
 
     
   if(loadingState === 'loaded' && !nfts.length) return (<h1
-    className='px-20 py-7 text-4x1 text-center'>You do not own any NFts currently :( </h1>)
+    className='px-20 py-7 text-4x1 text-center'>You do not own any NFTs currently :( </h1>)
 
     return (
       <div className='flex justify-center'>
@@ -66,8 +66,10 @@ export default function MyAssests() {
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4'>
               {
                 nfts.map((nft, i)=>(
-                  <div key={i} className='border shadow rounded-x1 overflow-hidden ' >
+                  <div key={i} className='border shadow rounded-lg overflow-hidden ' >
+                   <div className='flex justify-center'>
                     <img src={nft.image} />
+                    </div>
                     <div className='p-4'>
                       <p style={{height:'64px'}} className='text-3x1 font-semibold'>{
                         nft.name}</p>
