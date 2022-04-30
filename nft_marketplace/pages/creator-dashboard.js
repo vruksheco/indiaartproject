@@ -66,7 +66,7 @@ export default function CreatorDashBoard() {
   if(loadingState === 'loaded' && !nfts.length) return (
     <div>
       <div className='px-6 py-4'>
-        <button className='bg-sky-700 text-orange-200 py-1 px-12 rounded font-semibold' onClick={changePage}>
+        <button className='bg-orange-500 text-white py-1 px-12 rounded font-semibold' onClick={changePage}>
         Create
         </button>
       </div>
