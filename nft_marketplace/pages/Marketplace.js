@@ -22,7 +22,12 @@ export default function Marketplace() {
     // what we want to load:
     // ***provider, tokenContract, marketContract, data for our marketItems***
 
-    const provider = new ethers.providers.JsonRpcProvider()
+    //const provider = new ethers.providers.JsonRpcProvider()
+    
+    const web3Modal = new Web3Modal()
+      const connection = await web3Modal.connect()
+      const provider = new ethers.providers.Web3Provider(connection)
+    
     const tokenContract = new ethers.Contract(nftaddress, mintNFT.abi, provider)
     const marketContract = new ethers.Contract(nftmarketaddress, marketPlace.abi, provider)
     const data = await marketContract.fetchMarketTokens()
