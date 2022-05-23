@@ -1,15 +1,54 @@
-# Basic Sample Hardhat Project
+ManiacNFT Marketplace for NFTs
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This project is a NFT Marketplace that allows the users to:
+    - buy NFTs
+    - mint and sell NFTs
+    - keep track of bougth NFTs
+    - keep track of minted NFTs
 
-Try running some of the following tasks:
+The technologies used for this project are:
+    - Polygon Blockchain
+    - IPFS
+    - Solidity 
+    - ERC721 smartcontract standards
+    - Metamask
+    - Hardhat
+    - NextJS
+    - Tailwind CSS
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+
+To install the project and dependencies:
+
+1) clone the repository and change the directory to nft_marketplace.
+
+2) install dependencies by using:
+    npm install
+
+To run the project on localhost:
+
+1) start the local blockchain using:
+    npx hardhat node
+
+2) deploy the smartcontracts of the local blockchain using:
+    npx hardhat run .\scripts\deploy.js --network localhost
+
+3) start project using:
+    npm run dev
+
+4) go to chrome and install the metamask extension and configure hardhat local blockchain.
+
+
+Configuring Metamask for hardhat:
+
+1) Goto add networks.
+
+2) Set a network name.
+
+3) Set the new RPC URL to:
+    http://127.0.0.1:8545/
+
+4) Set chain id to 1337
+
+5) Set currency symbol to ETH
+
+6) Click save.
