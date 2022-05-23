@@ -1,10 +1,10 @@
 # ManiacNFT Marketplace for NFTs
 
-This project is a NFT Marketplace that allows the users to:
-    - buy NFTs
-    - mint and sell NFTs
-    - keep track of bougth NFTs
-    - keep track of minted NFTs
+This project is a NFT Marketplace that allows the users to:\
+    - buy NFTs\
+    - mint and sell NFTs\
+    - keep track of bougth NFTs\
+    - keep track of minted NFTs\
 
 ## Technologies used:
     - Polygon Blockchain
