@@ -22,19 +22,26 @@ To install the project and dependencies:
 1) clone the repository and change the directory to nft_marketplace.
 
 2) install dependencies by using:
-    npm install
+```sh
+npm install
+```
 
 To run the project on localhost:
 
 1) start the local blockchain using:
-    npx hardhat node
+```sh
+npx hardhat node
+```
 
 2) deploy the smartcontracts of the local blockchain using:
-    npx hardhat run .\scripts\deploy.js --network localhost
+```sh
+npx hardhat run ./scripts/deploy.js --network localhost
+```
 
 3) start project using:
-    npm run dev
-
+```sh
+npm run dev
+```
 4) go to chrome and install the metamask extension and configure hardhat local blockchain.
 
 
