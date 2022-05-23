@@ -1,12 +1,12 @@
 # ManiacNFT Marketplace for NFTs
 
-## This project is a NFT Marketplace that allows the users to:
+This project is a NFT Marketplace that allows the users to:
     - buy NFTs
     - mint and sell NFTs
     - keep track of bougth NFTs
     - keep track of minted NFTs
 
-## The technologies used for this project are:
+## Technologies used:
     - Polygon Blockchain
     - IPFS
     - Solidity 
@@ -17,7 +17,7 @@
     - Tailwind CSS
 
 
-## To install the project and dependencies:
+## Instalation:
 
 1) clone the repository and change the directory to nft_marketplace.
 
