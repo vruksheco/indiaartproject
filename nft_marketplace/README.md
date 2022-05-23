@@ -1,12 +1,12 @@
-ManiacNFT Marketplace for NFTs
+# ManiacNFT Marketplace for NFTs
 
-This project is a NFT Marketplace that allows the users to:
+## This project is a NFT Marketplace that allows the users to:
     - buy NFTs
     - mint and sell NFTs
     - keep track of bougth NFTs
     - keep track of minted NFTs
 
-The technologies used for this project are:
+## The technologies used for this project are:
     - Polygon Blockchain
     - IPFS
     - Solidity 
@@ -17,7 +17,7 @@ The technologies used for this project are:
     - Tailwind CSS
 
 
-To install the project and dependencies:
+## To install the project and dependencies:
 
 1) clone the repository and change the directory to nft_marketplace.
 
@@ -45,7 +45,7 @@ npm run dev
 4) go to chrome and install the metamask extension and configure hardhat local blockchain.
 
 
-Configuring Metamask for hardhat:
+## Configuring Metamask for hardhat:
 
 1) Goto add networks.
 
